@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladrón de Perros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+    <style>
+        .hero {
+            background-image: url('img/fond.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .button-primary {
+            background-color: #1D4ED8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-primary:hover {
+            background-color: #2563EB;
+        }
+
+        .review {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px;
+            }
+
+            .text-4xl {
+                font-size: 1.5rem;
+            }
+        }
+
+        .cast-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cast-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-500 text-white py-6 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Ladrón de Perros</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:underline">Acerca de</a></li>
+                    <li><a href="#cast" class="hover:underline">Reparto</a></li>
+                    <li><a href="#trailer" class="hover:underline">Tráiler</a></li>
+                    <li><a href="#tickets" class="hover:underline">Entradas</a></li>
+                    <li><a href="#reviews" class="hover:underline">Reseñas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-4xl mx-auto py-12 px-4">
+        <section class="hero mb-12">
+            <div class="overlay"></div>
+            <div class="hero-content text-center">
+                <h2 class="text-4xl font-bold">Una Aventura Emocionante</h2>
+                <a href="#trailer" class="button-primary mt-4 inline-block">Ver Tráiler</a>
+            </div>
+        </section>
+        <section id="about" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Acerca de la película</h2>
+            <p>Ladrón de Perros es una emocionante película sobre un ladrón de perros que se ve atrapado en una
+                peligrosa red de crimen y engaño. Sigue la historia mientras el ladrón intenta navegar por el submundo y
+                mantenerse un paso por delante de la ley.</p>
+        </section>
+        <section id="cast" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Reparto</h2>
+            <section id="cast" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Reparto</h2>
+                <ul class="list-disc pl-6">
+                    <li class="cast-item"><img src="path/to/johndoe.jpg" alt="John Doe"> John Doe como el Ladrón</li>
+                    <li class="cast-item"><img src="path/to/janesmith.jpg" alt="Jane Smith"> Jane Smith como la Oficial
+                        de Policía</li>
+                    <li class="cast-item"><img src="path/to/bobjohnson.jpg" alt="Bob Johnson"> Bob Johnson como el Jefe
+                        del Crimen</li>
+                </ul>
+            </section>
+            <section id="trailer" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Tráiler</h2>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe width="854" height="480" src="https://www.youtube.com/embed/cPdG9IYL1Us"
+                        title="El ladrón de perros: Tráiler Oficial" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="images" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Imágenes de la película</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="img/rod.jpeg" alt="Imagen de la película 1" class="w-full h-auto">
+                    <img src="/api/placeholder/400/320" alt="Imagen de la película 2" class="w-full h-auto">
+                    <img src="/api/placeholder/400/320" alt="Imagen de la película 3" class="w-full h-auto">
+                </div>
+            </section>
+            <section id="tickets" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Entradas y Sorteos</h2>
+                <p>Compra tus entradas para ver Ladrón de Perros y participa en nuestros sorteos exclusivos. ¡No te lo
+                    pierdas!</p>
+                <button class="button-primary mt-4">Comprar Entradas</button>
+            </section>
+            <section id="reviews" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Reseñas</h2>
+                <blockquote class="review">
+                    <p class="text-gray-700 italic">"Ladrón de Perros es una emocionante aventura de principio a fin. La
+                        actuación es de primera clase y la trama te mantiene al borde de tu asiento."</p>
+                    <cite class="text-gray-600 font-bold">- John Critic, Revista de Reseñas</cite>
+                </blockquote>
+                <blockquote class="review">
+                    <p class="text-gray-700 italic">"Esta película es imprescindible para cualquier fan de los dramas
+                        policíacos. El director hizo un trabajo excepcional al capturar el áspero submundo del robo de
+                        perros."</p>
+                    <cite class="text-gray-600 font-bold">- Jane Reviewer, Blog de Cine</cite>
+                </blockquote>
+            </section>
+            <section>
+                <h2>¿Por qué es un Landing Page?</h2>
+                <p>Es un landing page que tiene como objetivo aumentar el interes del publico</p>
+                <p>Su otro objetivo es informar sobre la pelicula "Ladron de Perros" y el rodaje.</p>
+                <p>Como ultimo objetivo es promocionar la pelicula mediante entradas, promociones especiales y articulos
+                    representativos de la misma pelicula.</p>
+            </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-4 px-4 text-center">
+        <p>&copy; 2023 Ladrón de Perros. Todos los derechos reservados.</p>
+        <p>Alumno: GUSTAVO RUBEN RETAMOZO CAYETANO</p>
+        <P>Alumno: AMILCAR BRANDON ZAMORA PAREDES</P>
+    </footer>
+</body>
+
+</html>
